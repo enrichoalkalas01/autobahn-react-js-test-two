@@ -1,0 +1,200 @@
+@import url('http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+
+// styles can be added here
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#app-test {
+    width: 100%;
+    height: auto;
+    position: relative;
+    .main-content {
+        width: auto;
+        height: auto;
+        position: relative;
+        padding: 2.5%;
+        .box-content {
+            width: auto;
+            height: auto;
+            position: relative;
+            border: 1px solid rgba(25, 25, 25, 0.5);
+            display: flex;
+            flex-basis: 50%;
+
+            &.title {
+                border: unset;
+                margin-bottom: 10px;
+            }
+
+            @media screen and ( max-width: 992px ) {
+                flex-direction: column-reverse;
+                border: unset;
+                flex-basis: unset;
+            }
+
+            .wrapper-content {
+                width: 100%;
+                position: relative;
+                padding: 2.5%;
+
+                @media screen and ( max-width: 992px ) {
+                    width: auto;
+                }
+            }
+
+            .content {
+                &.title-box {
+                    font-weight: 1000;
+                    h1 {
+                        margin: 0;
+                    }
+                }
+
+                &.menu-box {
+                    width: 100%;
+                    padding: 15px 10px;
+                    
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        display: flex;
+
+                        li {
+                            width: 100%;
+                            padding: 10px 5px;
+                            border: 1px solid rgba(25, 25, 25, 0.5);
+                            text-align: center;
+                            cursor: pointer;
+                            font-weight: 700;
+
+                            &:hover, &.active {
+                                background-color: green;
+                                transition: all ease 1s;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                &.content-data {
+                    .content-box {
+                        .wrapper-content-d {
+                            display: flex;
+                            margin-bottom: 10px;
+
+                            .icon-box {
+                                width: 5%;
+                                margin-right: 10px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                            }
+
+                            .desc-box {
+                                width: 90%;
+
+                                .negative {
+                                    color: red;
+                                    font-weight: 700;
+                                }
+
+                                .positive {
+                                    color: green;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.list-box {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    display: flex;
+                    flex-basis: 50%;
+                    align-items: flex-end;
+
+                    .wrapper-one {
+                        width: 100%;
+                        padding: 0 5px;
+                        select {
+                            width: 100%;
+                            padding: 5px 10px;
+                            outline: none;
+                            border-radius: 5px;
+                            border: 1px solid rgba(25, 25, 25, 0.5);
+                        }
+                    }
+
+                    .wrapper-two {
+                        width: 100%;
+                        padding: 0 5px;
+                        display: flex;
+                        flex-direction: column;
+                        input {
+                            width: auto;
+                            padding: 5px 10px;
+                            outline: none;
+                            border-radius: 5px;
+                            border: 1px solid rgba(25, 25, 25, 0.5);
+                        }
+                    }
+                }
+
+                &.list-wrapper-box {
+                    padding: 20px 5px;
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        tr {
+                            border: 1px solid rgba(25, 25, 25, 0.5);
+                            td {
+                                padding: 5px 5px;
+                                border: 0.1px solid rgba(25, 25, 25, 0.5);
+                                margin: 0 !important;
+                                font-weight: 700;
+
+                                &:nth-child(1) {
+                                    width: 75%;
+                                }
+
+                                &:nth-child(2) {
+                                    width: 25%;
+                                    text-align: center;
+                                }
+                            }
+
+                            &.data-list {
+                                td {
+                                    background-color: green;
+                                    color: #fff;
+                                }
+                            }
+                            &.last-child {
+                                td {
+                                    background-color: white;
+                                    color: unset;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ct-series {
+    &.ct-series-b {
+        .ct-bar {
+            stroke: green;
+        }
+    }
+}
